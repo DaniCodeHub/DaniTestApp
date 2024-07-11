@@ -1,0 +1,8 @@
+{% extends "base.html" %} {% block content %}
+<h1>Sellers</h1>
+<ul>
+    {% for seller in seller_list %}
+    <li>{{seller.seller_name}}: {% if seller.seller_established %} Is a Seller {% else %} Not a seller {% endif %}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

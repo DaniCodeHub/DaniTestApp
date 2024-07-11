@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block content %}
+<h1>Broker Name</h1>
+<ul>
+  {% for Broker_id in broker %}
+  <li>
+    {{ Broker_id.broker_name }}: {% if Broker_id.established %}Established Broker{% else %}Unestablished Broker{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
